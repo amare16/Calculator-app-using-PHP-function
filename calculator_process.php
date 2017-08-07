@@ -1,6 +1,6 @@
 <?php
 
-    function calcFunction() {
+    function compute() {
 
         $num1 = $_POST['firstNum'];
         $num2 = $_POST['secondNum'];
@@ -16,12 +16,16 @@
                 return $diff;
                 break;
             case "Multiplication":
-                $prod = $num1 + $num2;
+                $prod = $num1 * $num2;
                 return $prod;
                 break;
             case "Division":
-                $quo = $num1 + $num2;
+                $quo = $num1 / $num2;
                 return $quo;
+                break;
+            case "Modulo":
+                $mod = $num1 % $num2;
+                return $mod;
                 break;
             default:
                 echo "Invalid Operation";
@@ -29,6 +33,9 @@
         }
     }
 
+            echo "The result is :" . compute();
 
 
 ?>
+<br>
+<a href="calc.php">Back</a>
